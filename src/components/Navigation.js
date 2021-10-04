@@ -23,12 +23,11 @@ const NavContainer = styled.div`
   width: 80%;
   min-width: 12rem;
   margin: auto;
-  background-color: pink;
   overflow: hidden;
   border-radius: .2rem;
 `
 
-const Navigation = () => {
+const Navigation = (props) => {
   let history = useHistory()
   const goTo = (location) => {
     history.push(location)
@@ -45,7 +44,9 @@ const Navigation = () => {
       }}>Profile
       </NavButton>
       <NavButton onClick={ () => {
-        console.log('log out')
+        window.localStorage.removeItem('user')
+        history.push('/auth')
+        props.logOut()
       }}>Log Out
       </NavButton>
     </NavContainer>
