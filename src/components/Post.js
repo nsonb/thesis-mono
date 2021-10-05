@@ -1,4 +1,4 @@
-const Post = () => {
+const Post = (props) => {
   return (
     <div>
       I am a post
