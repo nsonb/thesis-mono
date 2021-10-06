@@ -1,17 +1,41 @@
 {
   "posts": [
-    { 
-      "id": 1, 
-      "title": "json-server", 
-      "author": "typicode", 
-      "content": 
-        {
-
-        } 
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "content": {
+        "text:": "Become as server",
+        "img": ""
+      }
+    },
+    {
+      "id": 2,
+      "title": "the world becomes as one",
+      "author": "kristofer",
+      "content": {
+        "text:": "I am le lord",
+        "img": ""
+      }
+    },
+    {
+      "title": "aszxc",
+      "author": "axel",
+      "content": {
+        "text": "qweadxcxczxc"
+      },
+      "id": 3
+    },
+    {
+      "title": "dragon",
+      "author": "axel",
+      "content": {
+        "text": "flyflyfly"
+      },
+      "id": 4
     }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "kristofer" }
+  "profile": {
+    "name": "kristofer"
+  }
 }

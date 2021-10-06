@@ -1,7 +1,7 @@
 const Post = (props) => {
   return (
     <div>
-      I am a post
+      {props.post.title}
     </div>
   )
 }

@@ -11,7 +11,6 @@ const NavButton = styled.div`
   line-height: 3rem;
   text-align: center;
   cursor: pointer;
-
   &:last-child {
     margin-left: auto;
   }

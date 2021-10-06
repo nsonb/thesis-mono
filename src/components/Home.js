@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Post from './Post'
+import Upload from "./Upload";
 import instance from "../axios/api";
 
 const Home = () => {
@@ -11,13 +12,17 @@ const Home = () => {
         setPosts(res.data)
       })
   }, [])
+
+  const renderedPosts = posts?.map((item) => {
+    return (
+      <Post post={item} key={item.title}/>
+    )
+  })
+
   return (
     <div>
-      { posts ? (
-        <div>
-          {posts[0].title}
-        </div>
-      ): null }
+      <Upload/>
+      {renderedPosts}
     </div>
   )
 }
