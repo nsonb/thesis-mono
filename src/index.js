@@ -5,6 +5,7 @@ import Authenticate from './components/Authenticate';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { DataContextProvider } from './context/DataContext'
 
 class ProtectedRoute extends Route {
   render() {
@@ -27,20 +28,22 @@ const App = () => {
   useEffect(() => {}, [user, setUser])
   return (
     <div>
-      <BrowserRouter>
-        {user !== null ? <Navigation logOut={logOut}/> : null}
-        current user is {user}
-        <Switch>
-          <ProtectedRoute path='/home' component={Home}/>
-          <ProtectedRoute path='/profile' component={Profile}/>
-          <Route exact path='/auth'>
-            <Authenticate logIn={logIn}/>
-          </Route>
-          <Route path='/'>
-            <Redirect to='/home'/>
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <DataContextProvider>
+        <BrowserRouter>
+          {user !== null ? <Navigation logOut={logOut}/> : null}
+          current user is {user}
+          <Switch>
+            <ProtectedRoute path='/home' component={Home}/>
+            <ProtectedRoute path='/profile' component={Profile}/>
+            <Route exact path='/auth'>
+              <Authenticate logIn={logIn}/>
+            </Route>
+            <Route path='/'>
+              <Redirect to='/home'/>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </DataContextProvider>
       </div>
   );
 }

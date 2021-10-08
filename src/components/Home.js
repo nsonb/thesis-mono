@@ -1,19 +1,16 @@
-import { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useContext } from "react";
 import Post from './Post'
 import Upload from "./Upload";
-import instance from "../axios/api";
+import { DataContext } from "../context/DataContext";
 
 const Home = () => {
-  const [ posts, setPosts ] = useState()
+  const { data, fetchData } = useContext(DataContext)
   useEffect(() => {
-    instance
-      .get('/posts')
-      .then((res) => {
-        setPosts(res.data)
-      })
+    if(fetchData) fetchData()
   }, [])
 
-  const renderedPosts = posts?.map((item) => {
+  const renderedPosts = data?.map((item) => {
     return (
       <Post post={item} key={item.title}/>
     )

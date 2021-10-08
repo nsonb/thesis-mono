@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import instance from "../axios/api"
+import { DataContext } from "../context/DataContext"
 
 const Upload = () => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
+  const { fetchData } = useContext(DataContext)
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -15,6 +17,9 @@ const Upload = () => {
         "content": {
           "text": content
         }
+      }).then((res) => {
+        console.log(res)
+        if(fetchData) fetchData()
       })
   }
 
