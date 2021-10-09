@@ -15,7 +15,6 @@ const Upload = () => {
           "text": content
         }
       }).then((res) => {
-        console.log(res)
         if(fetchData) fetchData()
       })
   }

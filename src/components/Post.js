@@ -16,9 +16,6 @@ const PostContainer = styled.div`
   box-sizing: border-box;
   
 `
-const PostTitle = styled.div`
-
-`
 const PostAuthor = styled.div`
   display: box;
   position: absolute;

@@ -44,7 +44,6 @@ const Authenticate = (props) => {
   const history = useHistory()
   const onSubmit = (e) => {
     e.preventDefault()
-    console.log(e)
     window.localStorage.setItem('user', user)
     props.logIn(user)
     history.replace('/home')
