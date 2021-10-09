@@ -2,24 +2,21 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode",
+      "author": "gandalf",
       "content": {
-        "text:": "Become as server",
+        "text": "Mordor. The one place in Middle-Earth we don't want to see any closer. And it's the one place we're trying to get to. It's just where we can't get. Let's face it, Mr. Frodo, we're lost.",
         "img": ""
       }
     },
     {
       "id": 2,
-      "title": "the world becomes as one",
       "author": "kristofer",
       "content": {
-        "text:": "I am le lord",
+        "text": "I am le lord",
         "img": ""
       }
     },
     {
-      "title": "aszxc",
       "author": "axel",
       "content": {
         "text": "qweadxcxczxc"
@@ -27,7 +24,6 @@
       "id": 3
     },
     {
-      "title": "dragon",
       "author": "axel",
       "content": {
         "text": "flyflyfly"
@@ -35,7 +31,6 @@
       "id": 4
     },
     {
-      "title": "xyz",
       "author": "axel",
       "content": {
         "text": "asdccveqessad"
@@ -43,7 +38,6 @@
       "id": 5
     },
     {
-      "title": "home is a lone",
       "author": "axel",
       "content": {
         "text": "cat is catching up"
@@ -51,7 +45,6 @@
       "id": 6
     },
     {
-      "title": "car",
       "author": "axel",
       "content": {
         "text": "zxczxcvcvcv"
@@ -59,7 +52,6 @@
       "id": 7
     },
     {
-      "title": "carsssscasss",
       "author": "cat",
       "content": {
         "text": "czxvcvc"
@@ -67,7 +59,6 @@
       "id": 8
     },
     {
-      "title": "axdawea",
       "author": "cat",
       "content": {
         "text": "vcvbcvwe da dasd "
@@ -75,7 +66,6 @@
       "id": 9
     },
     {
-      "title": "cats",
       "author": "cat",
       "content": {
         "text": "are scary"

@@ -10,6 +10,7 @@ const PostContainer = styled.div`
   min-width: 480px;
   margin: auto;
   margin-top: 1rem;
+  box-sizing: border-box;
 `
 const Home = () => {
   const { data, fetchData } = useContext(DataContext)

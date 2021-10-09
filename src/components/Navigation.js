@@ -5,10 +5,10 @@ const NavButton = styled.div`
   display: block;
   background-color: grey;
   color: white;
-  height: 3rem;
+  height: 1.6rem;
   width: 6rem;
   padding: .5rem;
-  line-height: 3rem;
+  line-height: 1.6rem;
   text-align: center;
   cursor: pointer;
   &:last-child {
