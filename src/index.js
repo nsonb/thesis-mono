@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { DataContextProvider } from './context/DataContext'
+import { AppContainer } from './common/Container'
 
 class ProtectedRoute extends Route {
   render() {
@@ -27,11 +28,10 @@ const App = () => {
 
   useEffect(() => {}, [user, setUser])
   return (
-    <div>
+    <AppContainer>
       <DataContextProvider>
         <BrowserRouter>
           {user !== null ? <Navigation logOut={logOut}/> : null}
-          current user is {user}
           <Switch>
             <ProtectedRoute path='/home' component={Home}/>
             <ProtectedRoute path='/profile' component={Profile}/>
@@ -44,7 +44,7 @@ const App = () => {
           </Switch>
         </BrowserRouter>
       </DataContextProvider>
-      </div>
+      </AppContainer>
   );
 }
 ReactDOM.render(<App />, document.getElementById('root'));
