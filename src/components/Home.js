@@ -3,7 +3,14 @@ import { useEffect, useContext } from "react";
 import Post from './Post'
 import Upload from "./Upload";
 import { DataContext } from "../context/DataContext";
+import styled from "@emotion/styled";
 
+const PostContainer = styled.div`
+  width: 35vw;
+  min-width: 480px;
+  margin: auto;
+  margin-top: 1rem;
+`
 const Home = () => {
   const { data, fetchData } = useContext(DataContext)
   useEffect(() => {
@@ -17,10 +24,10 @@ const Home = () => {
   })
 
   return (
-    <div>
+    <PostContainer>
       <Upload/>
       {renderedPosts}
-    </div>
+    </PostContainer>
   )
 }
 

@@ -12,7 +12,7 @@ const FormContainer = styled.form`
   height: 10rem;
   width: 50rem;
   margin: auto;
-  margin-top: 12rem;
+  margin-top: 15rem;
   box-sizing: border-box;
   border-radius: .5rem;
   color: ${default_theme.second};
@@ -33,10 +33,10 @@ const FormInput = styled.input`
   width: 100%;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  height: 1.5rem;
-  padding: .3rem;
+  height: 2rem;
   border-radius: .3rem;
   margin-top: .5rem;
+  box-sizing: border-box;
 `
 
 const Authenticate = (props) => {

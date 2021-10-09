@@ -19,8 +19,8 @@ const NavButton = styled.div`
 const NavContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 80%;
-  min-width: 12rem;
+  width: 35vw;
+  min-width: 480px;
   margin: auto;
   overflow: hidden;
   border-radius: .2rem;
