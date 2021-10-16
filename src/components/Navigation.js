@@ -38,10 +38,7 @@ const Navigation = (props) => {
       }}>
         Home
       </NavButton>
-      <NavButton onClick={ () => {
-        goTo('/profile')
-      }}>Profile
-      </NavButton>
+      
       <NavButton onClick={ () => {
         window.localStorage.removeItem('user')
         history.push('/auth')

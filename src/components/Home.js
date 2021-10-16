@@ -18,9 +18,9 @@ const Home = () => {
     if(fetchData) fetchData()
   }, [])
 
-  const renderedPosts = data?.map((item) => {
+  const renderedPosts = data?.sort((el1, el2)=> el2.id - el1.id).map((item) => {
     return (
-      <Post post={item} key={item.title}/>
+      <Post post={item} key={item.id}/>
     )
   })
 
